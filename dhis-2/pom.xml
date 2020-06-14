@@ -41,7 +41,7 @@
 
   <distributionManagement>
     <repository>
-      <id></id>
+      <id/>
       <name>DHIS 2 Maven repository</name>
       <url>scp://</url>
     </repository>
@@ -289,16 +289,19 @@
               <configuration>
                 <target>
                   <tstamp>
-                    <format property="now" pattern="yyyy-MM-dd HH:mm:ss" />
+                    <format property="now" pattern="yyyy-MM-dd HH:mm:ss"/>
                   </tstamp>
-                  <mkdir dir="${project.build.outputDirectory}" />
+                  <mkdir dir="${project.build.outputDirectory}"/>
                   <exec executable="git" outputproperty="revision" failifexecutionfails="false">
-                    <arg value="rev-parse" />
-                    <arg value="--short=7" />
-                    <arg value="HEAD" />
+                    <arg value="rev-parse"/>
+                    <arg value="--short=7"/>
+                    <arg value="HEAD"/>
                   </exec>
-                  <echo file="${project.build.outputDirectory}/build.properties"
-                    message="build.version = ${project.version}&#10;build.time = ${now}&#10;build.revision = ${revision}&#10;jasperreports.version = ${jasperreports.version}&#10;" />
+                  <echo file="${project.build.outputDirectory}/build.properties" message="build.version = ${project.version}
+build.time = ${now}
+build.revision = ${revision}
+jasperreports.version = ${jasperreports.version}
+"/>
                 </target>
               </configuration>
               <goals>
@@ -646,7 +649,7 @@
       <dependency>
         <groupId>com.google.api-client</groupId>
         <artifactId>google-api-client</artifactId>
-        <version>1.22.0</version>
+        <version>1.30.9</version>
       </dependency>
 
       <!-- Spring Mobile -->
@@ -1233,7 +1236,7 @@
   </dependencyManagement>
 
   <properties>
-    <rootDir></rootDir>
+    <rootDir/>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>4.3.20.RELEASE</spring.version>
     <spring-security.version>4.2.9.RELEASE</spring-security.version>
