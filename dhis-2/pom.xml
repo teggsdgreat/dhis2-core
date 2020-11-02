@@ -41,7 +41,7 @@
 
   <distributionManagement>
     <repository>
-      <id></id>
+      <id/>
       <name>DHIS 2 Maven repository</name>
       <url>scp://</url>
     </repository>
@@ -289,16 +289,19 @@
               <configuration>
                 <target>
                   <tstamp>
-                    <format property="now" pattern="yyyy-MM-dd HH:mm:ss" />
+                    <format property="now" pattern="yyyy-MM-dd HH:mm:ss"/>
                   </tstamp>
-                  <mkdir dir="${project.build.outputDirectory}" />
+                  <mkdir dir="${project.build.outputDirectory}"/>
                   <exec executable="git" outputproperty="revision" failifexecutionfails="false">
-                    <arg value="rev-parse" />
-                    <arg value="--short=7" />
-                    <arg value="HEAD" />
+                    <arg value="rev-parse"/>
+                    <arg value="--short=7"/>
+                    <arg value="HEAD"/>
                   </exec>
-                  <echo file="${project.build.outputDirectory}/build.properties"
-                    message="build.version = ${project.version}&#10;build.time = ${now}&#10;build.revision = ${revision}&#10;jasperreports.version = ${jasperreports.version}&#10;" />
+                  <echo file="${project.build.outputDirectory}/build.properties" message="build.version = ${project.version}
+build.time = ${now}
+build.revision = ${revision}
+jasperreports.version = ${jasperreports.version}
+"/>
                 </target>
               </configuration>
               <goals>
@@ -1233,7 +1236,7 @@
   </dependencyManagement>
 
   <properties>
-    <rootDir></rootDir>
+    <rootDir/>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>4.3.20.RELEASE</spring.version>
     <spring-security.version>4.2.9.RELEASE</spring-security.version>
@@ -1242,7 +1245,7 @@
     <lettuce.version>3.5.0.Final</lettuce.version>
     <spring-data-redis.version>1.7.11.RELEASE</spring-data-redis.version>
     <struts.version>2.3.36</struts.version>
-    <hibernate.version>5.2.17.Final</hibernate.version>
+    <hibernate.version>5.4.23.Final</hibernate.version>
     <hibernate-validator.version>4.3.2.Final</hibernate-validator.version>
     <jclouds.version>2.0.3</jclouds.version>
     <!-- Keep in sync with Hibernate -->
