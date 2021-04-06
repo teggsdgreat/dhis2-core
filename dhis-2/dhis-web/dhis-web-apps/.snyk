@@ -1,0 +1,14 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - event-capture-app > d2-tracker > gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2021-04-06T22:29:36.332Z'
+    - event-capture-app > d2-tracker > gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2021-04-06T22:29:36.332Z'
+    - event-capture-app > d2-tracker > gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2021-04-06T22:29:36.332Z'
+    - event-capture-app > d2-tracker > gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2021-04-06T22:29:36.332Z'

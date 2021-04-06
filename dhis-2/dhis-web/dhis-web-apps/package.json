@@ -5,7 +5,9 @@
   "scripts": {
     "copy-apps": "node ./scripts/copy-apps.js",
     "generate-struts": "node ./scripts/write-struts-xml.js",
-    "generate-index": "node ./scripts/write-index-html.js"
+    "generate-index": "node ./scripts/write-index-html.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Viktor Varland",
   "license": "BSD-3-Clause",
@@ -36,11 +38,13 @@
     "usage-analytics-app": "github:d2-ci/usage-analytics-app",
     "user-app": "github:d2-ci/user-app",
     "user-profile-app": "github:d2-ci/user-profile-app",
-    "visualizer-app": "github:d2-ci/charts-app"
+    "visualizer-app": "github:d2-ci/charts-app",
+    "snyk": "^1.526.0"
   },
   "devDependencies": {
     "@vardevs/log": "^1.0.0",
     "fs-extra": "^7.0.0",
     "xml2js": "^0.4.19"
-  }
+  },
+  "snyk": true
 }
